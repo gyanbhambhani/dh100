@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a7f1ace4394e5152d5779c365a3f776b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position: fixed; 
+                bottom: 50px; left: 50px; width: 320px; height: auto; 
+                background-color: white; border:3px solid #34495e; z-index:9999; 
+                font-size:16px; padding: 22px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+    <h4 style="margin: 0 0 14px 0; color: #2c3e50;">COVID-19 Media Coverage Map</h4>
+    <p><span style="color:red;">●</span> 10+ articles (Major coverage)</p>
+    <p><span style="color:orange;">●</span> 5-9 articles (Significant coverage)</p>
+    <p><span style="color:lightblue;">●</span> 2-4 articles (Moderate coverage)</p>
+    <p><span style="color:green;">●</span> 1 article (Mentioned)</p>
+    <p style="margin-top: 12px; font-size: 13px; color: #7f8c8d;"><em>Click markers for detailed analysis</em></p>
+    </div>
+    
+    
+            <div class="folium-map" id="map_a7f1ace4394e5152d5779c365a3f776b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a7f1ace4394e5152d5779c365a3f776b = L.map(
+                "map_a7f1ace4394e5152d5779c365a3f776b",
+                {
+                    center: [20.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c6bcf9a766a29f3a1e9dc745c02a1e93 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c6bcf9a766a29f3a1e9dc745c02a1e93.addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var marker_ce963211fd42de3efbf7bb3fa4e23a31 = L.marker(
+                [41.40044750729112, -72.94644655111557],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_80cd66b26e1588b71ece5808c9159392 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32c86aa0107615dcb43937b8b2adb076 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_72a0187bb67a31f183dc7e3d7614c6cd = $(`<div id="html_72a0187bb67a31f183dc7e3d7614c6cd" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Conn.</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Video: Coronavirus Has Hospitals in Desperate Need of ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times · The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">hopeful</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">preventable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> health care workers, doctors, nurses</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> fight, defense</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_32c86aa0107615dcb43937b8b2adb076.setContent(html_72a0187bb67a31f183dc7e3d7614c6cd);
+            
+        
+
+        marker_ce963211fd42de3efbf7bb3fa4e23a31.bindPopup(popup_32c86aa0107615dcb43937b8b2adb076)
+        ;
+
+        
+    
+    
+            marker_ce963211fd42de3efbf7bb3fa4e23a31.bindTooltip(
+                `<div>
+                     <b>Conn.</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ce963211fd42de3efbf7bb3fa4e23a31.setIcon(icon_80cd66b26e1588b71ece5808c9159392);
+            
+    
+            var marker_7120e40c28264ff5fd155c138092efe0 = L.marker(
+                [41.60060845121559, -73.00126263819125],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_18298475c57556d51ef0e08b942a85f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c7254148af6daec97d94a14961a82ae8 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_bb42b634be8e237862a90f700cea23c1 = $(`<div id="html_bb42b634be8e237862a90f700cea23c1" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Connecticut</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>2 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Video: 'People Are Dying': 72 Hours Inside a N.Y.C. Hospital ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times · The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> young people, healthcare workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war, disaster</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">13 Deaths in a Day: An 'Apocalyptic' Coronavirus Surge at ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> young people, doctors, nurses</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> apocalyptic, scrambling</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_c7254148af6daec97d94a14961a82ae8.setContent(html_bb42b634be8e237862a90f700cea23c1);
+            
+        
+
+        marker_7120e40c28264ff5fd155c138092efe0.bindPopup(popup_c7254148af6daec97d94a14961a82ae8)
+        ;
+
+        
+    
+    
+            marker_7120e40c28264ff5fd155c138092efe0.bindTooltip(
+                `<div>
+                     <b>Connecticut</b><br>2 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7120e40c28264ff5fd155c138092efe0.setIcon(icon_18298475c57556d51ef0e08b942a85f0);
+            
+    
+            var marker_19af1035384fcb0b8b2319d2dbf9bd0a = L.marker(
+                [38.55449975854052, -121.78983679510038],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_dc7b93c7bd29bb1b3d728522eb84a9d9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_894f186087f3770efd727f0664bf1b92 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_022e03f46946db9f30ac49e93ffc4ff4 = $(`<div id="html_022e03f46946db9f30ac49e93ffc4ff4" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Davis</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">U.S. Cases of Coronavirus Surpass 1000; British Health ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Californians, non-Americans, crew members</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> processing, cordoned off</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_894f186087f3770efd727f0664bf1b92.setContent(html_022e03f46946db9f30ac49e93ffc4ff4);
+            
+        
+
+        marker_19af1035384fcb0b8b2319d2dbf9bd0a.bindPopup(popup_894f186087f3770efd727f0664bf1b92)
+        ;
+
+        
+    
+    
+            marker_19af1035384fcb0b8b2319d2dbf9bd0a.bindTooltip(
+                `<div>
+                     <b>Davis</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_19af1035384fcb0b8b2319d2dbf9bd0a.setIcon(icon_dc7b93c7bd29bb1b3d728522eb84a9d9);
+            
+    
+            var marker_7590d01fe7d9f4096c5f8ba800baaa99 = L.marker(
+                [40.48664837494917, -89.16067818546425],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_b8074d3dcbd8daee1f9a51b2fec42461 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a7a4d7427bc1f9d4b096d4af9762ab4b = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_929778e5d4a2d2be54cf63485bd6e2e9 = $(`<div id="html_929778e5d4a2d2be54cf63485bd6e2e9" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Illinois</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">'It Feels Like a War Zone': Doctors and Nurses Plead for ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> healthcare workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war zone, cowboy</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_a7a4d7427bc1f9d4b096d4af9762ab4b.setContent(html_929778e5d4a2d2be54cf63485bd6e2e9);
+            
+        
+
+        marker_7590d01fe7d9f4096c5f8ba800baaa99.bindPopup(popup_a7a4d7427bc1f9d4b096d4af9762ab4b)
+        ;
+
+        
+    
+    
+            marker_7590d01fe7d9f4096c5f8ba800baaa99.bindTooltip(
+                `<div>
+                     <b>Illinois</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7590d01fe7d9f4096c5f8ba800baaa99.setIcon(icon_b8074d3dcbd8daee1f9a51b2fec42461);
+            
+    
+            var marker_3d575023ac4b50d894512f16d74f58a7 = L.marker(
+                [35.55236372452273, 139.84302413596737],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_1ee97263b77243ea466b8ba7f8ce3045 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8a7bc4adf7f44853a0837fa73d862665 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_98d1a56a96df0fcd65f161c6feeef749 = $(`<div id="html_98d1a56a96df0fcd65f161c6feeef749" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Tokyo</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>3 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Trapped on a Cruise Ship by the Coronavirus: When Is ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> stalked, trapped</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Coronavirus Briefing: What Happened Today</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> public health experts, Conservatives, Wall Street executives</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> wildly out of control, magic wand</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Japan Shocks Parents by Moving to Close All Schools ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> parents, students, businesses</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> drastic step, confronting talk</p>     </div>     </div>`)[0];
+                popup_8a7bc4adf7f44853a0837fa73d862665.setContent(html_98d1a56a96df0fcd65f161c6feeef749);
+            
+        
+
+        marker_3d575023ac4b50d894512f16d74f58a7.bindPopup(popup_8a7bc4adf7f44853a0837fa73d862665)
+        ;
+
+        
+    
+    
+            marker_3d575023ac4b50d894512f16d74f58a7.bindTooltip(
+                `<div>
+                     <b>Tokyo</b><br>3 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d575023ac4b50d894512f16d74f58a7.setIcon(icon_1ee97263b77243ea466b8ba7f8ce3045);
+            
+    
+            var marker_be0ad3b53521538a1d98e14f0c111743 = L.marker(
+                [40.75073257111083, -74.05197149060957],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_46c6bc73f6ac539d67fb41d1a10fab61 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e6e701e20f9826ae795066708f2c76b0 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_60156a1d435f9e0ec7ab579de2489c9c = $(`<div id="html_60156a1d435f9e0ec7ab579de2489c9c" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>New York City'S</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Density Is New York City's Big 'Enemy' in the Coronavirus ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">alarmed</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> New Yorkers, health care workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> attack, hot spots</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_e6e701e20f9826ae795066708f2c76b0.setContent(html_60156a1d435f9e0ec7ab579de2489c9c);
+            
+        
+
+        marker_be0ad3b53521538a1d98e14f0c111743.bindPopup(popup_e6e701e20f9826ae795066708f2c76b0)
+        ;
+
+        
+    
+    
+            marker_be0ad3b53521538a1d98e14f0c111743.bindTooltip(
+                `<div>
+                     <b>New York City'S</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_be0ad3b53521538a1d98e14f0c111743.setIcon(icon_46c6bc73f6ac539d67fb41d1a10fab61);
+            
+    
+            var marker_3e91f75487498d0051785b0422830a0f = L.marker(
+                [39.94341653325475, -86.16053731411587],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_482199df50c52c0b5a595e9bfee29949 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e144cea538764d30f35c73d7c130f1ca = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_a5531cb1e402f43ed4cbb3d29ec82bc3 = $(`<div id="html_a5531cb1e402f43ed4cbb3d29ec82bc3" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Indiana</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>47 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Opinion | Trump to New York: Drop Dead</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> New Yorkers, multicultural communities</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> black hole, gasping for breath</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Arkansas Hunkered Down to Survive Coronavirus. That ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> religious communities</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war, disaster</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Here's the Biggest Thing to Worry About With Coronavirus</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> general population</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> shock, surge capacity</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 44 more articles</p></div>`)[0];
+                popup_e144cea538764d30f35c73d7c130f1ca.setContent(html_a5531cb1e402f43ed4cbb3d29ec82bc3);
+            
+        
+
+        marker_3e91f75487498d0051785b0422830a0f.bindPopup(popup_e144cea538764d30f35c73d7c130f1ca)
+        ;
+
+        
+    
+    
+            marker_3e91f75487498d0051785b0422830a0f.bindTooltip(
+                `<div>
+                     <b>Indiana</b><br>47 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3e91f75487498d0051785b0422830a0f.setIcon(icon_482199df50c52c0b5a595e9bfee29949);
+            
+    
+            var marker_d43cb835f2674604b8983ccdceda238b = L.marker(
+                [44.403886218209436, -69.54507398433765],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_cf0c558aae67ca8f9368a6ecd9f0adae = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86babb9244e2c6add94324ec37d0792c = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_db6c856b87a4aab796680a976b3725f1 = $(`<div id="html_db6c856b87a4aab796680a976b3725f1" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Maine</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>4 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Italy's Health Care System Groans Under Coronavirus</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> healthcare workers, elderly, families</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war, battle</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Wuhan Rounds Up the Infected as Death Toll in China Jumps</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, families, healthcare workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war, fight</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Opinion | Where Is God in a Pandemic?</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">hopeful</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Christians, sick, dying</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> natural process, model for care</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 1 more articles</p></div>`)[0];
+                popup_86babb9244e2c6add94324ec37d0792c.setContent(html_db6c856b87a4aab796680a976b3725f1);
+            
+        
+
+        marker_d43cb835f2674604b8983ccdceda238b.bindPopup(popup_86babb9244e2c6add94324ec37d0792c)
+        ;
+
+        
+    
+    
+            marker_d43cb835f2674604b8983ccdceda238b.bindTooltip(
+                `<div>
+                     <b>Maine</b><br>4 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d43cb835f2674604b8983ccdceda238b.setIcon(icon_cf0c558aae67ca8f9368a6ecd9f0adae);
+            
+    
+            var marker_ccf15ebad4ce898be6eed643ae58606f = L.marker(
+                [40.89455294322279, -74.2483822730049],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_50c92f612ca3a5df2b3b15363256ed43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_be2b12f689660524f6a2e6c2426cfead = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_0c68287b95086524f4983da078adf74b = $(`<div id="html_0c68287b95086524f4983da078adf74b" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>New York City</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>9 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">New York City Region Is Now an Epicenter of ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> general population, frantic shoppers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> epicenter, crisis</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Coronavirus Briefing: What Happened Today</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> medical workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> beginning, crushing</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Nurses Die, Doctors Fall Sick and Panic Rises on Virus ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> doctors, nurses, medical professionals</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> exploding, petri dish</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 6 more articles</p></div>`)[0];
+                popup_be2b12f689660524f6a2e6c2426cfead.setContent(html_0c68287b95086524f4983da078adf74b);
+            
+        
+
+        marker_ccf15ebad4ce898be6eed643ae58606f.bindPopup(popup_be2b12f689660524f6a2e6c2426cfead)
+        ;
+
+        
+    
+    
+            marker_ccf15ebad4ce898be6eed643ae58606f.bindTooltip(
+                `<div>
+                     <b>New York City</b><br>9 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ccf15ebad4ce898be6eed643ae58606f.setIcon(icon_50c92f612ca3a5df2b3b15363256ed43);
+            
+    
+            var marker_3382a33f87ba9eba8a2bff325e4ede90 = L.marker(
+                [29.70806856575, -90.34751496035122],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_426be3418b00756d83777162008537a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f825069c95678f1faa1759c73e085586 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_86fdff2ff7f8c7bec900cade7b8f51ea = $(`<div id="html_86fdff2ff7f8c7bec900cade7b8f51ea" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Atlantic</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>2 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">With Coronavirus, 'Health Care for Some' Is a Recipe ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> citizens, noncitizens, low-wage workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> hanging by a thread, feed on itself</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Islands in the U.S. Are Barring All Outsiders to Keep ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> year-round residents, tourists</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> insurance, seal</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_f825069c95678f1faa1759c73e085586.setContent(html_86fdff2ff7f8c7bec900cade7b8f51ea);
+            
+        
+
+        marker_3382a33f87ba9eba8a2bff325e4ede90.bindPopup(popup_f825069c95678f1faa1759c73e085586)
+        ;
+
+        
+    
+    
+            marker_3382a33f87ba9eba8a2bff325e4ede90.bindTooltip(
+                `<div>
+                     <b>Atlantic</b><br>2 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3382a33f87ba9eba8a2bff325e4ede90.setIcon(icon_426be3418b00756d83777162008537a1);
+            
+    
+            var marker_413b2693f094405c075516e367e4d0c9 = L.marker(
+                [44.01892614018551, -121.29880243558577],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_82b8f84839d149949cfff319851dd03d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6eea21680cee6cbd0c8307f490133c8d = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_b0c66d39262f99eb38de9da061e7678e = $(`<div id="html_b0c66d39262f99eb38de9da061e7678e" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Oregon</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>55 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Video: Opinion | The President Is Lying About Coronavirus</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times · The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">indifferent</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> American people, medically high-risk patients</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> curve, ahead of the curve</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Someday, We'll Look Back on All of This and Write a Novel</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">other</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">other</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> None mentioned</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> tentacles, vector for death</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Here's What's in Congress's Emergency Coronavirus Bill</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> employees of businesses with fewer than 500 employees, government workers, large employers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> None</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 52 more articles</p></div>`)[0];
+                popup_6eea21680cee6cbd0c8307f490133c8d.setContent(html_b0c66d39262f99eb38de9da061e7678e);
+            
+        
+
+        marker_413b2693f094405c075516e367e4d0c9.bindPopup(popup_6eea21680cee6cbd0c8307f490133c8d)
+        ;
+
+        
+    
+    
+            marker_413b2693f094405c075516e367e4d0c9.bindTooltip(
+                `<div>
+                     <b>Oregon</b><br>55 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_413b2693f094405c075516e367e4d0c9.setIcon(icon_82b8f84839d149949cfff319851dd03d);
+            
+    
+            var marker_52e21f7a089da77ec7850e8c1a6445ed = L.marker(
+                [37.455813164677515, -84.78612203245646],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_08f41a72fb8b9239c82094ef0493765f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d80e11712ac9bebb403e05e80de93a70 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_5808c05c762c74da857da578d453011a = $(`<div id="html_5808c05c762c74da857da578d453011a" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Kentucky</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>2 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">As Coronavirus Spread, Largest Stimulus in History United ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Americans</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> roller coaster negotiations, muscle through</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Congress to Vote on Coronavirus Rescue Package</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, young people, pregnant women</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war, fight</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_d80e11712ac9bebb403e05e80de93a70.setContent(html_5808c05c762c74da857da578d453011a);
+            
+        
+
+        marker_52e21f7a089da77ec7850e8c1a6445ed.bindPopup(popup_d80e11712ac9bebb403e05e80de93a70)
+        ;
+
+        
+    
+    
+            marker_52e21f7a089da77ec7850e8c1a6445ed.bindTooltip(
+                `<div>
+                     <b>Kentucky</b><br>2 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_52e21f7a089da77ec7850e8c1a6445ed.setIcon(icon_08f41a72fb8b9239c82094ef0493765f);
+            
+    
+            var marker_cc7097e9d386b7b7b3dbeaf76c5bcff7 = L.marker(
+                [36.69460515227784, -119.3167969821827],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_27a85e438d45f578e0631bf8f48595c7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_234554ea6c792426450f8f497223fd73 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_9f51f5b7b91e67bce10da084515b429e = $(`<div id="html_9f51f5b7b91e67bce10da084515b429e" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>California</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>9 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Before Virus Outbreak, a Cascade of Warnings Went ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">preventable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> health officials, troops</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> warning shot</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Cruise Line Ads Get Caught in a Coronavirus News Cycle</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">indifferent</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">other</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> None mentioned</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> None</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">With Thousands Trapped on Board, Cruise Ship Awaits ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> passengers, crew members</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> military operation</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 6 more articles</p></div>`)[0];
+                popup_234554ea6c792426450f8f497223fd73.setContent(html_9f51f5b7b91e67bce10da084515b429e);
+            
+        
+
+        marker_cc7097e9d386b7b7b3dbeaf76c5bcff7.bindPopup(popup_234554ea6c792426450f8f497223fd73)
+        ;
+
+        
+    
+    
+            marker_cc7097e9d386b7b7b3dbeaf76c5bcff7.bindTooltip(
+                `<div>
+                     <b>California</b><br>9 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cc7097e9d386b7b7b3dbeaf76c5bcff7.setIcon(icon_27a85e438d45f578e0631bf8f48595c7);
+            
+    
+            var marker_2e562462790becb3143b845dec24dab0 = L.marker(
+                [35.80343806828579, 104.25372578759858],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_7d880c010b25e5640bc1feeabefbab4a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8c933f5d65c3da0700d91875f01cc11c = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_2c09130ab3e1343ba849c87ae2f0723b = $(`<div id="html_2c09130ab3e1343ba849c87ae2f0723b" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>China</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>4 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Video: How China Is Reshaping the Coronavirus Narrative</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times · The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">other</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Chinese citizens, foreign experts, United States</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> fight, damage control</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">An American Dies From the Virus in Wuhan, China</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">personal tragedy</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> American, family</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> None</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Coronavirus, Italy, Bernie Sanders: Your Tuesday Briefing</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Italian population, Chinese government</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> protected zone, national emergency</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 1 more articles</p></div>`)[0];
+                popup_8c933f5d65c3da0700d91875f01cc11c.setContent(html_2c09130ab3e1343ba849c87ae2f0723b);
+            
+        
+
+        marker_2e562462790becb3143b845dec24dab0.bindPopup(popup_8c933f5d65c3da0700d91875f01cc11c)
+        ;
+
+        
+    
+    
+            marker_2e562462790becb3143b845dec24dab0.bindTooltip(
+                `<div>
+                     <b>China</b><br>4 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e562462790becb3143b845dec24dab0.setIcon(icon_7d880c010b25e5640bc1feeabefbab4a);
+            
+    
+            var marker_88956faeec1cb62b00e3b7c88fd48b86 = L.marker(
+                [37.24369460912459, -95.56242782087934],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_59328a79ca6e17f2eb7aae8a6f0ed138 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d2a1573bdce2044148b48d242425b89c = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_81b6223c5d27bf18f252f3924421a678 = $(`<div id="html_81b6223c5d27bf18f252f3924421a678" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>The United States</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>26 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Film Club: 'Coronavirus Racism Infected My High School'</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Asian-Americans, Chinese, Irish immigrants</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> virus spreading, Petri dish for racism</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Opinion | Call It 'Coronavirus'</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Asian-Americans, Chinese, Irish immigrants</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> virus spreading, Petri dish for racism</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">'The Other Option Is Death': New York Starts Sharing of ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">preventable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> patients, doctors, federal and state governments</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> desperate measure, surge</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 23 more articles</p></div>`)[0];
+                popup_d2a1573bdce2044148b48d242425b89c.setContent(html_81b6223c5d27bf18f252f3924421a678);
+            
+        
+
+        marker_88956faeec1cb62b00e3b7c88fd48b86.bindPopup(popup_d2a1573bdce2044148b48d242425b89c)
+        ;
+
+        
+    
+    
+            marker_88956faeec1cb62b00e3b7c88fd48b86.bindTooltip(
+                `<div>
+                     <b>The United States</b><br>26 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_88956faeec1cb62b00e3b7c88fd48b86.setIcon(icon_59328a79ca6e17f2eb7aae8a6f0ed138);
+            
+    
+            var marker_46c49793c9bc484d575a1623a2a6f21f = L.marker(
+                [47.816914045917365, -122.22963956343776],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_f5ff94ae992c9de4ebde0786200fd529 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2b5927d6689587427c990123080c142 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_a90d344b3125497eb77b139d18ee9a98 = $(`<div id="html_a90d344b3125497eb77b139d18ee9a98" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Wash.</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>8 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Opinion | 'Covid-19 Kills Only Old People.' Only?</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, national leaders, young adults</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> second-class citizenship, solitary confinement</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">As China Clamps Down on Negative News, Quarantines ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> healthcare workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> fight</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Second Death From Virus Is Reported in the U.S.</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, nursing facility residents, healthcare workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> None</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 5 more articles</p></div>`)[0];
+                popup_a2b5927d6689587427c990123080c142.setContent(html_a90d344b3125497eb77b139d18ee9a98);
+            
+        
+
+        marker_46c49793c9bc484d575a1623a2a6f21f.bindPopup(popup_a2b5927d6689587427c990123080c142)
+        ;
+
+        
+    
+    
+            marker_46c49793c9bc484d575a1623a2a6f21f.bindTooltip(
+                `<div>
+                     <b>Wash.</b><br>8 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_46c49793c9bc484d575a1623a2a6f21f.setIcon(icon_f5ff94ae992c9de4ebde0786200fd529);
+            
+    
+            var marker_878035fe0c02e03e8057f99cc738af69 = L.marker(
+                [45.54410961025134, 9.085184503490284],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_cac1c38b46b722a0fc4ae3af9e401dbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0b3e681e78a6caed1bb5a7f854be88bf = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_9134303442203cb550f73fca7b2a6969 = $(`<div id="html_9134303442203cb550f73fca7b2a6969" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Milan</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>3 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">We Take the Dead From Morning Till Night</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">preventable / political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, working-class</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war, trenches</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">On Day 1 of Lockdown, Italian Officials Urge Citizens to ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">preventable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Italians, party promoters, loved ones</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> hedges in a steeplechase course, plague spreader</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Italy's Elderly Suffer Heavy Toll as Coronavirus Spreads</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> finish line</p>     </div>     </div>`)[0];
+                popup_0b3e681e78a6caed1bb5a7f854be88bf.setContent(html_9134303442203cb550f73fca7b2a6969);
+            
+        
+
+        marker_878035fe0c02e03e8057f99cc738af69.bindPopup(popup_0b3e681e78a6caed1bb5a7f854be88bf)
+        ;
+
+        
+    
+    
+            marker_878035fe0c02e03e8057f99cc738af69.bindTooltip(
+                `<div>
+                     <b>Milan</b><br>3 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_878035fe0c02e03e8057f99cc738af69.setIcon(icon_cac1c38b46b722a0fc4ae3af9e401dbf);
+            
+    
+            var marker_c9015c47bb4007979bb07c29449bba43 = L.marker(
+                [34.1576891061517, 100.66449606256967],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_477176c3ee5c06dc32c7bb7e895d1f74 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_45107b2874251a15638df1c90d97386d = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_ed41d0ee2eae8ce0db50608e6a96ccd9 = $(`<div id="html_ed41d0ee2eae8ce0db50608e6a96ccd9" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Asia</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>4 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">As New Cases Surge, Businesses Face Grim Fallout</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> travelers, South Korean church members</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> surge, race</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">First U.S. Colleges Close Classrooms as Virus Spreads. ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> students, university staff</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> spread, outbreak</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Coronavirus Refugees: The World's Most Vulnerable Face ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> refugees, international health experts, aid workers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> embattled enclave, breeding grounds for contagion</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 1 more articles</p></div>`)[0];
+                popup_45107b2874251a15638df1c90d97386d.setContent(html_ed41d0ee2eae8ce0db50608e6a96ccd9);
+            
+        
+
+        marker_c9015c47bb4007979bb07c29449bba43.bindPopup(popup_45107b2874251a15638df1c90d97386d)
+        ;
+
+        
+    
+    
+            marker_c9015c47bb4007979bb07c29449bba43.bindTooltip(
+                `<div>
+                     <b>Asia</b><br>4 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9015c47bb4007979bb07c29449bba43.setIcon(icon_477176c3ee5c06dc32c7bb7e895d1f74);
+            
+    
+            var marker_587601d0a402e6372c8ed73362b17dc6 = L.marker(
+                [54.75819571227379, 15.010797966346107],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_355a530308c3e614d1ba9ea510ea9338 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_99e9b8ac6fb297a96415e738a7ddcb39 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_c24f3018a1d5267cf858a0be906583d7 = $(`<div id="html_c24f3018a1d5267cf858a0be906583d7" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Europe</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>6 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">No Handshakes, No New Citizens: Coronavirus Halts ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> immigrants, new citizens</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> None</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Italy Locks Down Much of the Country's North Over ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">urgent</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">sacrifice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Italian population, economic engine</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> sacrifice, ravages</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Virus Hits Europe Harder Than China. Is That the Price of ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Europeans, Chinese</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> macabre milestones, price</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 3 more articles</p></div>`)[0];
+                popup_99e9b8ac6fb297a96415e738a7ddcb39.setContent(html_c24f3018a1d5267cf858a0be906583d7);
+            
+        
+
+        marker_587601d0a402e6372c8ed73362b17dc6.bindPopup(popup_99e9b8ac6fb297a96415e738a7ddcb39)
+        ;
+
+        
+    
+    
+            marker_587601d0a402e6372c8ed73362b17dc6.bindTooltip(
+                `<div>
+                     <b>Europe</b><br>6 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_587601d0a402e6372c8ed73362b17dc6.setIcon(icon_355a530308c3e614d1ba9ea510ea9338);
+            
+    
+            var marker_8c7fed24aec5dfb25f928fa180a1bb4e = L.marker(
+                [40.25190794887514, -3.453874072148356],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_64601dea1a4e9e13220b4afecd2e1d7c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_187870fc898bb0aa37c7f183f674f024 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_f8384b95be1e082657e0e6c73c2d04da = $(`<div id="html_f8384b95be1e082657e0e6c73c2d04da" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Spain</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">The Hardest Questions Doctors May Face: Who Will Be ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> health care workers, American hospitals, public health officials</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war, fight</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_187870fc898bb0aa37c7f183f674f024.setContent(html_f8384b95be1e082657e0e6c73c2d04da);
+            
+        
+
+        marker_8c7fed24aec5dfb25f928fa180a1bb4e.bindPopup(popup_187870fc898bb0aa37c7f183f674f024)
+        ;
+
+        
+    
+    
+            marker_8c7fed24aec5dfb25f928fa180a1bb4e.bindTooltip(
+                `<div>
+                     <b>Spain</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8c7fed24aec5dfb25f928fa180a1bb4e.setIcon(icon_64601dea1a4e9e13220b4afecd2e1d7c);
+            
+    
+            var marker_df59937e481eb55f77a69ce776e45543 = L.marker(
+                [51.240744381142335, 10.401079134305917],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_8fadde1daed7dc6446fe561c24bfeef2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4b786a1443632a157c370a7f6103cff6 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_03a930412617560591c2bb7f45c757bf = $(`<div id="html_03a930412617560591c2bb7f45c757bf" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Germany</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>8 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Germany Has Relatively Few Deaths From Coronavirus. ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">preventable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, young people</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> containment, wave</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Opinion | The U.S. Is Not Winning the Coronavirus Fight</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> Americans</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> fight, flatten the curve</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Alarm Grows as Markets Tumble and Death Toll Rises</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, children</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> center of the outbreak</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 5 more articles</p></div>`)[0];
+                popup_4b786a1443632a157c370a7f6103cff6.setContent(html_03a930412617560591c2bb7f45c757bf);
+            
+        
+
+        marker_df59937e481eb55f77a69ce776e45543.bindPopup(popup_4b786a1443632a157c370a7f6103cff6)
+        ;
+
+        
+    
+    
+            marker_df59937e481eb55f77a69ce776e45543.bindTooltip(
+                `<div>
+                     <b>Germany</b><br>8 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_df59937e481eb55f77a69ce776e45543.setIcon(icon_8fadde1daed7dc6446fe561c24bfeef2);
+            
+    
+            var marker_5d2e295a21e1ed2c529e19400ee4640d = L.marker(
+                [36.24424074956664, 138.2092089323277],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_1c8e5d0f99da88874e7914165756c980 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fee1e5ceeaac90de5fbe0db139487af = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_eac351f1e86571b0a1e65bc97c86ad1b = $(`<div id="html_eac351f1e86571b0a1e65bc97c86ad1b" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Japan</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">In Graying Japan, Many Are Vulnerable but Few Are Being ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, young, service providers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> life-or-death mission, battle</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_2fee1e5ceeaac90de5fbe0db139487af.setContent(html_eac351f1e86571b0a1e65bc97c86ad1b);
+            
+        
+
+        marker_5d2e295a21e1ed2c529e19400ee4640d.bindPopup(popup_2fee1e5ceeaac90de5fbe0db139487af)
+        ;
+
+        
+    
+    
+            marker_5d2e295a21e1ed2c529e19400ee4640d.bindTooltip(
+                `<div>
+                     <b>Japan</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5d2e295a21e1ed2c529e19400ee4640d.setIcon(icon_1c8e5d0f99da88874e7914165756c980);
+            
+    
+            var marker_6ce27412bc0c8ccd795e9050d9e2e4ff = L.marker(
+                [32.477879681845025, 53.85720882672328],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_71dafb02ca5a7003580febcd210e7784 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_720c4c53740f5a4a11c8216c8e52b56a = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_acd3b046f52a6571b8470e56f74791a6 = $(`<div id="html_acd3b046f52a6571b8470e56f74791a6" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Iran</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>3 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Hackers Attack Health and Human Services Computer ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> None mentioned</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> war, fight</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Iran Vice President Is One of 7 Officials to Contract ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> government officials</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> None</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Video: Sick Politicians and a Lack of Urgency: Tracking Iran's ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times · The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> politicians, clerics, lawmakers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> epicenter, mismanagement on international display</p>     </div>     </div>`)[0];
+                popup_720c4c53740f5a4a11c8216c8e52b56a.setContent(html_acd3b046f52a6571b8470e56f74791a6);
+            
+        
+
+        marker_6ce27412bc0c8ccd795e9050d9e2e4ff.bindPopup(popup_720c4c53740f5a4a11c8216c8e52b56a)
+        ;
+
+        
+    
+    
+            marker_6ce27412bc0c8ccd795e9050d9e2e4ff.bindTooltip(
+                `<div>
+                     <b>Iran</b><br>3 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ce27412bc0c8ccd795e9050d9e2e4ff.setIcon(icon_71dafb02ca5a7003580febcd210e7784);
+            
+    
+            var marker_c1cef2610fb6c2e3d81078b1af10b392 = L.marker(
+                [39.36595765069976, -75.24025865189937],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_f38dd3648326b33440e108a17fe8a4db = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_64cace1e670cc756f1c3c28033ef3ab2 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_9db2d2f774166d90908845213c749dd3 = $(`<div id="html_9db2d2f774166d90908845213c749dd3" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Delaware</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">De Blasio Calls Stimulus Deal's Treatment of N.Y.C. 'Immoral'</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> New Yorkers, U.S. Senate, federal government</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> crush of new cases</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_64cace1e670cc756f1c3c28033ef3ab2.setContent(html_9db2d2f774166d90908845213c749dd3);
+            
+        
+
+        marker_c1cef2610fb6c2e3d81078b1af10b392.bindPopup(popup_64cace1e670cc756f1c3c28033ef3ab2)
+        ;
+
+        
+    
+    
+            marker_c1cef2610fb6c2e3d81078b1af10b392.bindTooltip(
+                `<div>
+                     <b>Delaware</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c1cef2610fb6c2e3d81078b1af10b392.setIcon(icon_f38dd3648326b33440e108a17fe8a4db);
+            
+    
+            var marker_ee2794efe081454dc5c4271d7d2ed244 = L.marker(
+                [20.07276711099594, -155.32926635167667],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_81fc4208cbfb055dd228b6e15320454c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5abac52a8a6368dabe29d8961bec363b = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_000aa59b6c061950351bb8b5da98afbb = $(`<div id="html_000aa59b6c061950351bb8b5da98afbb" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Hawaii</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">As Natural Disasters Strike, a New Fear: Relief Shelters ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">concerned</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic challenge</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> emergency managers, disaster-response work force</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> hot spots, taxed</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_5abac52a8a6368dabe29d8961bec363b.setContent(html_000aa59b6c061950351bb8b5da98afbb);
+            
+        
+
+        marker_ee2794efe081454dc5c4271d7d2ed244.bindPopup(popup_5abac52a8a6368dabe29d8961bec363b)
+        ;
+
+        
+    
+    
+            marker_ee2794efe081454dc5c4271d7d2ed244.bindTooltip(
+                `<div>
+                     <b>Hawaii</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ee2794efe081454dc5c4271d7d2ed244.setIcon(icon_81fc4208cbfb055dd228b6e15320454c);
+            
+    
+            var marker_d48627e07a99a2fdd734c47ce10d6729 = L.marker(
+                [37.905548357005294, -122.12622217762215],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_693f5201b5ac20a226be6f5feebe1009 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d419913ba6713119669e40e645c1002 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_e1ca130a49a20b35bedaf88fd6ceec00 = $(`<div id="html_e1ca130a49a20b35bedaf88fd6ceec00" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>San Francisco</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">A Virus Put My Asthmatic Son in the I.C.U. What Could ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">anxious</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">personal tragedy</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> children, parents, asthmatic children</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> sharks, battle with illness</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_6d419913ba6713119669e40e645c1002.setContent(html_e1ca130a49a20b35bedaf88fd6ceec00);
+            
+        
+
+        marker_d48627e07a99a2fdd734c47ce10d6729.bindPopup(popup_6d419913ba6713119669e40e645c1002)
+        ;
+
+        
+    
+    
+            marker_d48627e07a99a2fdd734c47ce10d6729.bindTooltip(
+                `<div>
+                     <b>San Francisco</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d48627e07a99a2fdd734c47ce10d6729.setIcon(icon_693f5201b5ac20a226be6f5feebe1009);
+            
+    
+            var marker_00ec0600b071d0c5133635f50968f186 = L.marker(
+                [41.83770324462428, 12.806738079329266],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_2661d72abf2db3706164d247be2a00a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a2b589d45979036ff64fac5f71a734dd = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_b2334dcb0a3b381c8268fcd9722bc4bc = $(`<div id="html_b2334dcb0a3b381c8268fcd9722bc4bc" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Italy</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>4 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Death of Store Clerk in Italy Highlights Contagion's New ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">preventable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> health care workers, supermarket clerks, doctors</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> fight, trenches</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Italy Announces Restrictions Over Entire Country in Attempt ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, sick people</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> sacrifice, clampdown</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">'Everything Is a Black Hole': Mounting Dread in the Age of ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, children</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> black hole, chain reaction</p>     </div>     <p style='text-align: center; color: #7f8c8d; font-style: italic; margin-top: 15px;'>... and 1 more articles</p></div>`)[0];
+                popup_a2b589d45979036ff64fac5f71a734dd.setContent(html_b2334dcb0a3b381c8268fcd9722bc4bc);
+            
+        
+
+        marker_00ec0600b071d0c5133635f50968f186.bindPopup(popup_a2b589d45979036ff64fac5f71a734dd)
+        ;
+
+        
+    
+    
+            marker_00ec0600b071d0c5133635f50968f186.bindTooltip(
+                `<div>
+                     <b>Italy</b><br>4 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_00ec0600b071d0c5133635f50968f186.setIcon(icon_2661d72abf2db3706164d247be2a00a1);
+            
+    
+            var marker_d90b41a89aa99dcfae281f3c9a7c812e = L.marker(
+                [35.513778564558415, 139.4014908886187],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_feb756b4cb6b143f4f5e36adb197280a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_badbd40bc812c8a5c0587b24c6f156e9 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_50efa57fd995f4357cc9e84e522a0033 = $(`<div id="html_50efa57fd995f4357cc9e84e522a0033" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Yokohama</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>3 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">South Korea Confirms a Jump in Coronavirus Infections</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">inevitable</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> superspreading event</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Failures on the Diamond Princess Shadow Another Cruise ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, government officials</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> breakdown, fumbled alert</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">As Passenger Angst Grows, Japan to Let Some Off Ship ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">anxious</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">political failure</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> elderly, passengers with underlying medical conditions</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> epidemiological challenge</p>     </div>     </div>`)[0];
+                popup_badbd40bc812c8a5c0587b24c6f156e9.setContent(html_50efa57fd995f4357cc9e84e522a0033);
+            
+        
+
+        marker_d90b41a89aa99dcfae281f3c9a7c812e.bindPopup(popup_badbd40bc812c8a5c0587b24c6f156e9)
+        ;
+
+        
+    
+    
+            marker_d90b41a89aa99dcfae281f3c9a7c812e.bindTooltip(
+                `<div>
+                     <b>Yokohama</b><br>3 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d90b41a89aa99dcfae281f3c9a7c812e.setIcon(icon_feb756b4cb6b143f4f5e36adb197280a);
+            
+    
+            var marker_1b8c0f3699d06dadf3d11bda18d69453 = L.marker(
+                [36.94445595613833, -119.16413014833769],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_ca4ed90a7fafa86f2be898d0a7ae98ed = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightblue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7b95e5646e9a7bcad03a7b0f9176c7bd = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_d388a8491385bdb8db858eaf55ed8d58 = $(`<div id="html_d388a8491385bdb8db858eaf55ed8d58" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>Calif.</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>2 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Sick People Across the U.S. Say They Are Being Denied ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">frustrated</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> sick people, patients, passengers</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> gantlet</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">When a Pandemic Strikes Americans Who Are Already ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">tragic</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">systemic injustice</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> homeless, medical students</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> abandonment</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_7b95e5646e9a7bcad03a7b0f9176c7bd.setContent(html_d388a8491385bdb8db858eaf55ed8d58);
+            
+        
+
+        marker_1b8c0f3699d06dadf3d11bda18d69453.bindPopup(popup_7b95e5646e9a7bcad03a7b0f9176c7bd)
+        ;
+
+        
+    
+    
+            marker_1b8c0f3699d06dadf3d11bda18d69453.bindTooltip(
+                `<div>
+                     <b>Calif.</b><br>2 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b8c0f3699d06dadf3d11bda18d69453.setIcon(icon_ca4ed90a7fafa86f2be898d0a7ae98ed);
+            
+    
+            var marker_2359fcf6ea5b76432af18b109d088d41 = L.marker(
+                [40.81691623025966, -74.07486202473969],
+                {
+}
+            ).addTo(map_a7f1ace4394e5152d5779c365a3f776b);
+        
+    
+            var icon_9f4f578b907f336baa0986390c02e7fb = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_606e94758fdbef6a81449f06627f3d96 = L.popup({
+  "maxWidth": 450,
+});
+
+        
+            
+                var html_4c713dc163e17793af037c08824fabc1 = $(`<div id="html_4c713dc163e17793af037c08824fabc1" style="width: 100.0%; height: 100.0%;"><h2 style='color: #2c3e50; margin-bottom: 15px;'>New York</h2><p style='font-size: 16px; color: #7f8c8d; margin-bottom: 20px;'><strong>1 articles</strong></p>     <div style="width: 400px; font-family: Arial, sans-serif;">         <h3 style="margin: 0 0 15px 0; color: #2c3e50; font-size: 16px; border-bottom: 2px solid #3498db; padding-bottom: 5px;">Headlines from The New York Times for Saturday, March ...</h3>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Source:</strong> The New York Times</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Tone:</strong> <span style="color: #e74c3c; font-weight: bold;">neutral</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Framing:</strong> <span style="color: #3498db; font-weight: bold;">other</span></p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Groups:</strong> None mentioned</p>         <p style="margin: 8px 0; font-size: 14px;"><strong style="color: #34495e;">Metaphors:</strong> None</p>     </div>     <hr style='margin: 20px 0; border: 1px solid #ecf0f1;'></div>`)[0];
+                popup_606e94758fdbef6a81449f06627f3d96.setContent(html_4c713dc163e17793af037c08824fabc1);
+            
+        
+
+        marker_2359fcf6ea5b76432af18b109d088d41.bindPopup(popup_606e94758fdbef6a81449f06627f3d96)
+        ;
+
+        
+    
+    
+            marker_2359fcf6ea5b76432af18b109d088d41.bindTooltip(
+                `<div>
+                     <b>New York</b><br>1 articles - Click for details!
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2359fcf6ea5b76432af18b109d088d41.setIcon(icon_9f4f578b907f336baa0986390c02e7fb);
+            
+</script>
+</html>
